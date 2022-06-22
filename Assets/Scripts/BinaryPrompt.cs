@@ -29,15 +29,18 @@ public class BinaryPrompt : MonoBehaviour {
 
         foreach (string line in lines) {
             binArr.Add(line);
-            Debug.Log(line);
         }
     }
 
-    public void SetPrompt() {
-        prompt.text = binArr[UnityEngine.Random.Range(0, binArr.Count)];
+    /* Prompts the binary number & returns it as an int */
+    public int SetPrompt() {
+        string bin = binArr[UnityEngine.Random.Range(0, binArr.Count)];
+        prompt.text = bin;
+        return Convert.ToInt32(bin);
     }
 
     public void removePrompt() {
         prompt.text = "";
     }
+
 }
