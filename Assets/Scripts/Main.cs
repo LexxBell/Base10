@@ -18,10 +18,5 @@ public class Main : MonoBehaviour
         decimalNum = binaryToDec.ConvertToDec(binaryNum);
         Debug.Log(decimalNum);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
