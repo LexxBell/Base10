@@ -2,22 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+using System.IO;
 using TMPro;
 public class GetInput : MonoBehaviour
 {
-    public string input;
+    private string input;
     public TMP_InputField inputField;
+    private int finalInput;
 
-    public string getInput()
+    public void getInput() 
+    {
 
-    {   
-        if (inputField.GetComponent<Text>().text != null) {
+
             input = inputField.GetComponent<Text>().text;
-            return input;
-        } else {
-            return ":(";
-        }
+            finalInput = Convert.ToInt32(input);
 
+    }
+
+    public int getIntInput()
+    {
+        return finalInput;
     }
 
 }
